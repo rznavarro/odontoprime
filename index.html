@@ -1,0 +1,1181 @@
+<!doctype html>
+<html lang="es-CL" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urgencia Dental en Providencia | OdontoPrime – Abierto hasta las 23:00</title>
+    <meta
+      name="description"
+      content="Urgencia dental en Providencia: atención inmediata y sin dolor con especialistas. Abierto todos los días hasta las 23:00. Escríbenos por WhatsApp o llama al +56 9 5211 0209."
+    />
+    <meta property="og:title" content="Urgencia Dental en Providencia | OdontoPrime – Abierto hasta las 23:00" />
+    <meta
+      property="og:description"
+      content="Urgencia dental en Providencia: atención inmediata y sin dolor con especialistas. Abierto todos los días hasta las 23:00. Escríbenos por WhatsApp o llama al +56 9 5211 0209."
+    />
+    <meta property="og:image" content="https://odontoprime.cl/wp-content/uploads/2023/04/Sala-1-900.webp" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+
+    <!-- Google Fonts: Poppins (500, 600, 700) & Lato (400, 700) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              prime: '#CCB15A',
+              dark: '#141313',
+              light: '#F9F9F6',
+              muted: '#E9E9E9',
+              danger: '#DE4949',
+            },
+            fontFamily: {
+              sans: ['Lato', 'sans-serif'],
+              display: ['Poppins', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Schema.org JSON-LD (Dentist) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "OdontoPrime",
+        "alternateName": "Odontoprime Ltda.",
+        "description": "Urgencia dental en Providencia: atención inmediata y sin dolor con especialistas. Abierto todos los días hasta las 23:00.",
+        "image": "https://odontoprime.cl/wp-content/uploads/2023/04/Sala-1-900.webp",
+        "telephone": "+56952110209",
+        "email": "odontoprimeurgenciadental@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Alfredo Barros Errázuriz 1954, of. 609",
+          "addressLocality": "Providencia",
+          "addressRegion": "Región Metropolitana",
+          "addressCountry": "CL"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "14:00",
+            "closes": "23:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday", "Sunday"],
+            "opens": "13:00",
+            "closes": "23:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/odontoprimeurgencia/"
+        ]
+      }
+    </script>
+
+    <style>
+      /* Brand Variables & Base Typography */
+      :root {
+        --color-prime: #CCB15A;
+        --color-dark: #141313;
+        --color-light: #F9F9F6;
+        --color-muted: #E9E9E9;
+        --color-danger: #DE4949;
+        --color-white: #FFFFFF;
+      }
+
+      body {
+        font-family: 'Lato', sans-serif;
+        background-color: var(--color-light);
+        color: var(--color-dark);
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      h1, h2, h3, .font-heading {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      /* Hero Line-Mask Animations */
+      .hero-mask {
+        overflow: hidden;
+      }
+
+      .hero-line-1, .hero-line-2, .hero-line-sub, .hero-line-meta, .hero-line-ctas {
+        transform: translateY(105%);
+        transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1);
+      }
+
+      .hero-bg-zoom {
+        transform: scale(1.08);
+        transition: transform 1.4s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+
+      .hero-word-urgencia {
+        transform: translateY(60%);
+        opacity: 0;
+        transition: transform 1.1s cubic-bezier(0.76, 0, 0.24, 1), opacity 1.1s ease;
+      }
+
+      body.loaded .hero-line-1 {
+        transform: translateY(0);
+        transition-delay: 0.05s;
+      }
+
+      body.loaded .hero-line-2 {
+        transform: translateY(0);
+        transition-delay: 0.13s;
+      }
+
+      body.loaded .hero-line-sub {
+        transform: translateY(0);
+        transition-delay: 0.21s;
+      }
+
+      body.loaded .hero-line-meta {
+        transform: translateY(0);
+        transition-delay: 0.29s;
+      }
+
+      body.loaded .hero-line-ctas {
+        transform: translateY(0);
+        transition-delay: 0.37s;
+      }
+
+      body.loaded .hero-bg-zoom {
+        transform: scale(1);
+      }
+
+      body.loaded .hero-word-urgencia {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: 0.45s;
+      }
+
+      /* Diagonal Mask for Clinic Image in Confianza */
+      .clip-diagonal {
+        clip-path: polygon(0 0, 88% 0, 100% 100%, 10% 100%);
+      }
+
+      @media (max-width: 768px) {
+        .clip-diagonal {
+          clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+        }
+      }
+
+      /* Interactive Hover on Urgencia Rows */
+      .urgencia-row {
+        border-top: 1px solid rgba(20, 19, 19, 0.18);
+        transition: background-color 0.2s ease;
+      }
+      .urgencia-row:hover .row-num {
+        color: var(--color-prime);
+      }
+      .urgencia-row:hover .row-title {
+        transform: translateX(8px);
+      }
+      .row-title {
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      /* Reveal Observer Styles */
+      .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal-on-scroll.is-revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Reduced Motion Compatibility */
+      @media (prefers-reduced-motion: reduce) {
+        .hero-line-1, .hero-line-2, .hero-line-sub, .hero-line-meta, .hero-line-ctas,
+        .hero-bg-zoom, .hero-word-urgencia, .reveal-on-scroll, .row-title {
+          transition: none !important;
+          transform: none !important;
+          opacity: 1 !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#F9F9F6] text-[#141313] antialiased pb-20 md:pb-0 selection:bg-[#CCB15A] selection:text-[#141313]">
+
+    <!-- Top Scroll Progress Bar (3px #CCB15A) -->
+    <div
+      id="scroll-progress-bar"
+      class="fixed top-0 left-0 h-[3px] bg-[#CCB15A] z-50 transition-all duration-75 pointer-events-none"
+      style="width: 0%"
+      aria-hidden="true"
+    ></div>
+
+    <!-- Fixed Header -->
+    <header
+      id="main-header"
+      class="fixed top-0 left-0 right-0 z-40 transition-colors duration-300"
+    >
+      <div class="max-w-[1240px] mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-between">
+        <!-- Logo (Negative for dark hero/blur header) -->
+        <a href="#" class="inline-flex items-center" aria-label="OdontoPrime Inicio">
+          <img
+            src="assets/logo-negativo.png"
+            onerror="this.onerror=null; this.src='assets/logo.png';"
+            alt="OdontoPrime Urgencia Dental"
+            class="h-8 sm:h-9 md:h-10 w-auto object-contain"
+            width="200"
+            height="102"
+          />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-[15px] font-medium text-[#F9F9F6]" aria-label="Navegación principal">
+          <a href="#urgencias" class="hover:text-[#CCB15A] transition-colors">Urgencias</a>
+          <a href="#nosotros" class="hover:text-[#CCB15A] transition-colors">Nosotros</a>
+          <a href="#estetica" class="hover:text-[#CCB15A] transition-colors">Estética</a>
+          <a href="#contacto" class="hover:text-[#CCB15A] transition-colors">Contacto</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div class="flex items-center gap-3">
+          <!-- Desktop CTA -->
+          <a
+            href="https://wa.link/507odt"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hidden md:inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-[#141313] bg-[#CCB15A] rounded-full hover:brightness-105 transition-all"
+          >
+            Agendar por WhatsApp
+          </a>
+
+          <!-- Mobile Call Quick Button in Header -->
+          <a
+            href="tel:+56952110209"
+            class="md:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-[#F9F9F6] border border-[#CCB15A] rounded-full hover:bg-[#CCB15A] hover:text-[#141313] transition-colors"
+            aria-label="Llamar a urgencia dental"
+          >
+            <svg class="w-3.5 h-3.5 text-[#CCB15A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            Llamar
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1. HERO SECTION (100svh, Primera Pantalla Móvil Completa 390x844 sin scroll) -->
+      <section
+        id="hero"
+        class="relative min-h-[100svh] w-full bg-[#141313] text-[#F9F9F6] flex flex-col justify-between pt-18 sm:pt-20 md:pt-24 pb-0 overflow-hidden"
+        aria-labelledby="hero-title"
+      >
+        <!-- Background Image with Zoom & Dark Gradient Overlay -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none" aria-hidden="true">
+          <img
+            src="https://odontoprime.cl/wp-content/uploads/2023/04/Sala-1-900.webp"
+            alt="Sala clínica OdontoPrime Providencia"
+            fetchpriority="high"
+            class="hero-bg-zoom w-full h-full object-cover object-center"
+            width="900"
+            height="600"
+          />
+          <!-- Permitted Dark Overlay: #141313 with transparency -->
+          <div
+            class="absolute inset-0"
+            style="background: linear-gradient(180deg, rgba(20,19,19,0.85) 0%, rgba(20,19,19,0.88) 60%, rgba(20,19,19,0.96) 100%);"
+          ></div>
+        </div>
+
+        <!-- Hero Content Container (Sized for immediate mobile comprehension) -->
+        <div class="relative z-10 max-w-[1240px] w-full mx-auto px-5 md:px-8 pt-4 pb-2 flex-1 flex flex-col justify-center">
+          <div class="max-w-3xl">
+            <!-- Etiqueta superior -->
+            <div class="hero-mask mb-2">
+              <p class="hero-line-1 text-[#CCB15A] font-display text-[12px] font-medium tracking-[0.14em] uppercase">
+                URGENCIA Y ESTÉTICA DENTAL
+              </p>
+            </div>
+
+            <!-- H1 Principal con Line-Mask -->
+            <div class="hero-mask">
+              <h1
+                id="hero-title"
+                class="hero-line-2 text-[#FFFFFF] font-display font-bold text-[34px] sm:text-[46px] md:text-[62px] lg:text-[76px] leading-[1.05] tracking-[-0.02em] mb-2 sm:mb-3"
+              >
+                Urgencia dental en Providencia.
+              </h1>
+            </div>
+
+            <!-- Subtítulo -->
+            <div class="hero-mask mb-3 sm:mb-4">
+              <p class="hero-line-sub text-[#F9F9F6]/90 text-[15px] sm:text-[17px] md:text-[18px] leading-[1.5] max-w-2xl">
+                Atención inmediata y sin dolor, con especialistas. Resolvemos el 99,9% de las urgencias en la primera cita.
+              </p>
+            </div>
+
+            <!-- Chip de Estado en Vivo & Dirección -->
+            <div class="hero-mask mb-4 sm:mb-6">
+              <div class="hero-line-meta flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm">
+                <!-- Live Status Chip -->
+                <div
+                  id="live-status-chip"
+                  class="inline-flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-[rgba(249,249,246,0.18)]"
+                  role="status"
+                  aria-live="polite"
+                >
+                  <span id="status-dot" class="w-2 h-2 rounded-full bg-[#CCB15A]" aria-hidden="true"></span>
+                  <span id="status-text" class="font-medium text-[#F9F9F6]">Calculando horario...</span>
+                </div>
+
+                <!-- Short Address linked to map -->
+                <a
+                  href="https://goo.gl/maps/F9Wiz9HaVMHUkapCA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 text-[#F9F9F6]/85 hover:text-[#CCB15A] transition-colors"
+                  title="Abrir ubicación en Google Maps"
+                >
+                  <svg class="w-3.5 h-3.5 text-[#CCB15A] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>Alfredo Barros Errázuriz 1954, of. 609 · Providencia</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- CTAs Principales -->
+            <div class="hero-mask">
+              <div class="hero-line-ctas flex flex-row flex-wrap items-center gap-3 pt-1">
+                <!-- Primario: WhatsApp -->
+                <a
+                  href="https://wa.link/507odt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-3 text-sm sm:text-base font-semibold text-[#141313] bg-[#CCB15A] rounded-full hover:brightness-105 active:scale-[0.98] transition-all"
+                >
+                  <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                  </svg>
+                  <span>Escribir por WhatsApp</span>
+                </a>
+
+                <!-- Secundario: Llamar ahora -->
+                <a
+                  href="tel:+56952110209"
+                  class="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-3 text-sm sm:text-base font-semibold text-[#F9F9F6] border border-[#CCB15A] rounded-full hover:bg-[#CCB15A] hover:text-[#141313] active:scale-[0.98] transition-all"
+                >
+                  <svg class="w-4 h-4 sm:w-5 sm:h-5 text-[#CCB15A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <span>Llamar ahora</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Giant Anchored Word "URGENCIA" at the Bottom of the Hero -->
+        <div class="relative z-10 w-full overflow-hidden select-none pointer-events-none mt-auto" aria-hidden="true">
+          <div class="hero-word-urgencia w-full text-center">
+            <span
+              class="block font-display font-bold text-[#CCB15A] opacity-90 leading-[0.82] tracking-[-0.04em] whitespace-nowrap translate-y-[18%]"
+              style="font-size: clamp(64px, 17vw, 260px);"
+            >
+              URGENCIA
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- BANDA SEPARADORA (-1.2deg estática, fondo #CCB15A, texto #141313) -->
+      <div class="relative overflow-hidden bg-[#141313] py-2 sm:py-3 z-20" aria-label="Valores destacados">
+        <div
+          class="w-[104%] -ml-[2%] bg-[#CCB15A] text-[#141313] py-3.5 sm:py-4 px-4 text-center transform -rotate-[1.2deg] shadow-sm select-none"
+        >
+          <p class="font-display font-semibold text-xs sm:text-sm md:text-base tracking-wide uppercase whitespace-nowrap overflow-x-hidden text-ellipsis">
+            Atención inmediata · Tratamiento sin dolor · Especialistas · Conducto en sesión única · Evaluación sin costo
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. URGENCIAS — "¿Qué te está pasando?" -->
+      <section
+        id="urgencias"
+        class="py-16 sm:py-20 md:py-28 bg-[#F9F9F6] text-[#141313] reveal-on-scroll"
+        aria-labelledby="urgencias-title"
+      >
+        <div class="max-w-[1240px] mx-auto px-5 md:px-8">
+          <div class="max-w-2xl mb-12 sm:mb-16">
+            <p class="text-[#CCB15A] font-display text-[12px] font-medium tracking-[0.14em] uppercase mb-2">
+              ATENCIÓN INMEDIATA
+            </p>
+            <h2 id="urgencias-title" class="font-display font-semibold text-[30px] sm:text-[42px] md:text-[52px] leading-tight text-[#141313] mb-4">
+              ¿Qué te está pasando?
+            </h2>
+            <p class="text-[16px] sm:text-[18px] text-[#141313]/80 leading-relaxed">
+              Si tienes dolor, escríbenos y te orientamos. No tienes que esperar a que el malestar empeore.
+            </p>
+          </div>
+
+          <!-- Editorial Numbered List (01, 02, 03, 04) -->
+          <div class="border-b border-[rgba(20,19,19,0.18)] mb-12">
+            <!-- 01 Dolor dental -->
+            <div class="urgencia-row py-6 sm:py-8 flex flex-col md:flex-row md:items-baseline justify-between gap-3 md:gap-8 group">
+              <div class="flex items-baseline gap-4 sm:gap-6">
+                <span class="row-num font-display font-bold text-xl sm:text-2xl text-[#141313]/50 transition-colors">01</span>
+                <h3 class="row-title font-display font-semibold text-xl sm:text-2xl md:text-3xl text-[#141313]">
+                  Dolor dental
+                </h3>
+              </div>
+              <p class="text-[15px] sm:text-[16px] text-[#141313]/80 max-w-xl md:text-right">
+                Alivio rápido y diagnóstico certero para dolor agudo, pulpitis y sensibilidad intensa.
+              </p>
+            </div>
+
+            <!-- 02 Muela del juicio / extracciones -->
+            <div class="urgencia-row py-6 sm:py-8 flex flex-col md:flex-row md:items-baseline justify-between gap-3 md:gap-8 group">
+              <div class="flex items-baseline gap-4 sm:gap-6">
+                <span class="row-num font-display font-bold text-xl sm:text-2xl text-[#141313]/50 transition-colors">02</span>
+                <h3 class="row-title font-display font-semibold text-xl sm:text-2xl md:text-3xl text-[#141313]">
+                  Muela del juicio / extracciones
+                </h3>
+              </div>
+              <p class="text-[15px] sm:text-[16px] text-[#141313]/80 max-w-xl md:text-right">
+                Extracción segura y sin dolor de terceros molares inflamados y piezas complejas.
+              </p>
+            </div>
+
+            <!-- 03 Tratamiento de conducto -->
+            <div class="urgencia-row py-6 sm:py-8 flex flex-col md:flex-row md:items-baseline justify-between gap-3 md:gap-8 group">
+              <div class="flex items-baseline gap-4 sm:gap-6">
+                <span class="row-num font-display font-bold text-xl sm:text-2xl text-[#141313]/50 transition-colors">03</span>
+                <h3 class="row-title font-display font-semibold text-xl sm:text-2xl md:text-3xl text-[#141313]">
+                  Tratamiento de conducto en sesión única
+                </h3>
+              </div>
+              <p class="text-[15px] sm:text-[16px] text-[#141313]/80 max-w-xl md:text-right">
+                Endodoncia de urgencia realizada por especialistas para salvar tu pieza dental en una sola cita.
+              </p>
+            </div>
+
+            <!-- 04 Diente fracturado -->
+            <div class="urgencia-row py-6 sm:py-8 flex flex-col md:flex-row md:items-baseline justify-between gap-3 md:gap-8 group">
+              <div class="flex items-baseline gap-4 sm:gap-6">
+                <span class="row-num font-display font-bold text-xl sm:text-2xl text-[#141313]/50 transition-colors">04</span>
+                <h3 class="row-title font-display font-semibold text-xl sm:text-2xl md:text-3xl text-[#141313]">
+                  Diente fracturado
+                </h3>
+              </div>
+              <p class="text-[15px] sm:text-[16px] text-[#141313]/80 max-w-xl md:text-right">
+                Reconstrucción estética inmediata y protección del nervio ante traumatismos o quiebres.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bloque en #E9E9E9: Pacientes especiales -->
+          <div class="bg-[#E9E9E9] rounded-[6px] p-6 sm:p-8 mb-10 border border-black/5">
+            <h4 class="font-display font-semibold text-lg sm:text-xl text-[#141313] mb-2">
+              Pacientes especiales
+            </h4>
+            <p class="text-[15px] sm:text-[16px] text-[#141313]/90 leading-relaxed">
+              Atendemos urgencias durante embarazo, puerperio y lactancia, y a pacientes con diabetes, hipertensión, enfermedad cardíaca o renal con protocolos médicos adaptados y seguros.
+            </p>
+          </div>
+
+          <!-- Section CTA -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
+            <p class="text-[15px] sm:text-[16px] text-[#141313]/80 font-medium">
+              ¿No estás seguro de tu urgencia? Escríbenos y un especialista te orienta de inmediato.
+            </p>
+            <a
+              href="https://wa.link/507odt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 text-sm sm:text-base font-semibold text-[#141313] bg-[#CCB15A] rounded-full hover:brightness-105 active:scale-[0.98] transition-all whitespace-nowrap"
+            >
+              Cuéntanos tu caso por WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. CONFIANZA — "Especialistas en urgencias" -->
+      <section
+        id="nosotros"
+        class="py-16 sm:py-20 md:py-28 bg-[#141313] text-[#F9F9F6] reveal-on-scroll"
+        aria-labelledby="nosotros-title"
+      >
+        <div class="max-w-[1240px] mx-auto px-5 md:px-8">
+          <!-- 12-Column Grid (Image with Diagonal Mask + Team Presentation) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-16 sm:mb-20">
+            <!-- Left: Diagonal Mask Real Clinic Photo (5 cols) -->
+            <div class="lg:col-span-5 relative">
+              <div class="overflow-hidden rounded-[3px]">
+                <img
+                  src="https://odontoprime.cl/wp-content/uploads/2023/04/Consulta-1-900-1-1.webp"
+                  alt="Consulta dental de OdontoPrime en Providencia"
+                  loading="lazy"
+                  class="clip-diagonal w-full h-[320px] sm:h-[420px] lg:h-[480px] object-cover object-center"
+                  width="900"
+                  height="600"
+                />
+              </div>
+            </div>
+
+            <!-- Right: Highlights & Quiénes Somos (7 cols) -->
+            <div class="lg:col-span-7 flex flex-col justify-center">
+              <p class="text-[#CCB15A] font-display text-[12px] font-medium tracking-[0.14em] uppercase mb-2">
+                EQUIPO CLÍNICO
+              </p>
+              <h2 id="nosotros-title" class="font-display font-semibold text-[30px] sm:text-[42px] md:text-[50px] leading-tight text-[#FFFFFF] mb-6">
+                Especialistas en urgencias
+              </h2>
+
+              <!-- Key Metrics (Static figures, no counter) -->
+              <div class="grid grid-cols-2 gap-6 sm:gap-8 py-4 mb-6 border-y border-[rgba(249,249,246,0.18)]">
+                <div>
+                  <span class="block font-display font-bold text-3xl sm:text-5xl text-[#CCB15A] tabular-nums">
+                    +10 años
+                  </span>
+                  <span class="text-xs sm:text-sm text-[#F9F9F6]/80 mt-1 block">
+                    de experiencia en emergencias dentales
+                  </span>
+                </div>
+                <div>
+                  <span class="block font-display font-bold text-3xl sm:text-5xl text-[#CCB15A] tabular-nums">
+                    99,9%
+                  </span>
+                  <span class="text-xs sm:text-sm text-[#F9F9F6]/80 mt-1 block">
+                    resueltas en la primera cita
+                  </span>
+                </div>
+              </div>
+
+              <!-- 3 Clean Value Points (Rewritten without errors) -->
+              <div class="space-y-4 text-[15px] sm:text-[17px] text-[#F9F9F6]/90 leading-relaxed mb-8">
+                <p>
+                  Somos un equipo de especialistas con más de 10 años de experiencia dedicados al manejo oportuno y seguro de emergencias dentales complejas.
+                </p>
+                <p>
+                  Utilizamos los protocolos clínicos y materiales más actualizados para brindar tratamientos indoloros, duraderos y con la mayor estética dental.
+                </p>
+                <p>
+                  Resolvemos el 99,9% de las emergencias dentales en la primera cita, siempre con un enfoque ético, transparente y centrado en aliviar tu dolor con calidez humana.
+                </p>
+              </div>
+
+              <div>
+                <a
+                  href="https://wa.link/507odt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 text-sm sm:text-base font-semibold text-[#141313] bg-[#CCB15A] rounded-full hover:brightness-105 active:scale-[0.98] transition-all"
+                >
+                  Agenda tu evaluación sin costo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Reviews Sub-block -->
+          <div class="pt-8 border-t border-[rgba(249,249,246,0.18)]">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-8">
+              <div>
+                <span class="inline-block text-[#CCB15A] font-display text-[12px] font-medium tracking-[0.14em] uppercase">
+                  624 RESEÑAS EN GOOGLE
+                </span>
+                <h3 class="font-display font-semibold text-xl sm:text-2xl text-[#FFFFFF] mt-1">
+                  Pacientes que aliviaron su dolor con nosotros
+                </h3>
+              </div>
+            </div>
+
+            <!-- Testimonial Cards: Grid on tablet/desktop, horizontal snap-scroll on mobile -->
+            <div class="flex md:grid md:grid-cols-3 gap-5 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-0 -mx-5 px-5 md:mx-0 md:px-0">
+              <!-- Testimonio 1: Karina Díaz -->
+              <div class="min-w-[280px] sm:min-w-[320px] md:min-w-0 snap-start flex-1 bg-white/[0.02] border border-[rgba(249,249,246,0.18)] rounded-[6px] p-6 flex flex-col justify-between">
+                <div>
+                  <span class="text-[#CCB15A] font-display text-4xl leading-none select-none" aria-hidden="true">“</span>
+                  <p class="text-[14px] sm:text-[15px] text-[#F9F9F6]/90 leading-relaxed italic mt-2 mb-6">
+                    Fui hoy sábado con un fuerte dolor de muela, desde que llegué fui muy recibida, me explicaron todo, el tratamiento posterior y los valores. El dr me dejó varios remedios y ahora me siento mucho mejor… hoy podré dormir más aliviada.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-[rgba(249,249,246,0.1)]">
+                  <p class="font-display font-semibold text-xs text-[#CCB15A] tracking-wider uppercase">
+                    KARINA DÍAZ
+                  </p>
+                  <p class="text-[12px] text-[#F9F9F6]/60">Reseña verificada de Google</p>
+                </div>
+              </div>
+
+              <!-- Testimonio 2: Karla Ojeda -->
+              <div class="min-w-[280px] sm:min-w-[320px] md:min-w-0 snap-start flex-1 bg-white/[0.02] border border-[rgba(249,249,246,0.18)] rounded-[6px] p-6 flex flex-col justify-between">
+                <div>
+                  <span class="text-[#CCB15A] font-display text-4xl leading-none select-none" aria-hidden="true">“</span>
+                  <p class="text-[14px] sm:text-[15px] text-[#F9F9F6]/90 leading-relaxed italic mt-2 mb-6">
+                    Buenísima atención, yo tengo fobia al dentista y fueron muy amables y comprensivos.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-[rgba(249,249,246,0.1)]">
+                  <p class="font-display font-semibold text-xs text-[#CCB15A] tracking-wider uppercase">
+                    KARLA OJEDA
+                  </p>
+                  <p class="text-[12px] text-[#F9F9F6]/60">Reseña verificada de Google</p>
+                </div>
+              </div>
+
+              <!-- Testimonio 3: Romina O. -->
+              <div class="min-w-[280px] sm:min-w-[320px] md:min-w-0 snap-start flex-1 bg-white/[0.02] border border-[rgba(249,249,246,0.18)] rounded-[6px] p-6 flex flex-col justify-between">
+                <div>
+                  <span class="text-[#CCB15A] font-display text-4xl leading-none select-none" aria-hidden="true">“</span>
+                  <p class="text-[14px] sm:text-[15px] text-[#F9F9F6]/90 leading-relaxed italic mt-2 mb-6">
+                    Excelente atención, muy profesionales, 1000/10. Se me fracturó un diente de adelante y me quedó como nuevo.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-[rgba(249,249,246,0.1)]">
+                  <p class="font-display font-semibold text-xs text-[#CCB15A] tracking-wider uppercase">
+                    ROMINA O.
+                  </p>
+                  <p class="text-[12px] text-[#F9F9F6]/60">Reseña verificada de Google</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. ESTÉTICA Y ESPECIALIDADES — "También cuidamos tu sonrisa" -->
+      <section
+        id="estetica"
+        class="py-16 sm:py-20 md:py-28 bg-[#F9F9F6] text-[#141313] reveal-on-scroll"
+        aria-labelledby="estetica-title"
+      >
+        <div class="max-w-[1240px] mx-auto px-5 md:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <!-- Left: Numbered Esthetic Services & Specialties (7 cols) -->
+            <div class="lg:col-span-7">
+              <p class="text-[#CCB15A] font-display text-[12px] font-medium tracking-[0.14em] uppercase mb-2">
+                LÍNEA ESTÉTICA & TRATAMIENTOS
+              </p>
+              <h2 id="estetica-title" class="font-display font-semibold text-[30px] sm:text-[42px] md:text-[50px] leading-tight text-[#141313] mb-4">
+                También cuidamos tu sonrisa
+              </h2>
+              <p class="text-[16px] sm:text-[18px] text-[#141313]/80 leading-relaxed mb-8">
+                Además de urgencias, ofrecemos tratamientos integrales para devolver la armonía, brillo y salud definitiva a tus dientes.
+              </p>
+
+              <!-- 3 Filas numeradas -->
+              <div class="border-b border-[rgba(20,19,19,0.18)] mb-8">
+                <div class="urgencia-row py-5 flex items-baseline justify-between gap-4">
+                  <div class="flex items-baseline gap-4">
+                    <span class="row-num font-display font-bold text-lg text-[#141313]/50">01</span>
+                    <h3 class="row-title font-display font-semibold text-lg sm:text-xl text-[#141313]">
+                      Diseño de sonrisa (carillas)
+                    </h3>
+                  </div>
+                  <span class="text-xs sm:text-sm text-[#141313]/70 text-right">Armonización estética de alta precisión</span>
+                </div>
+
+                <div class="urgencia-row py-5 flex items-baseline justify-between gap-4">
+                  <div class="flex items-baseline gap-4">
+                    <span class="row-num font-display font-bold text-lg text-[#141313]/50">02</span>
+                    <h3 class="row-title font-display font-semibold text-lg sm:text-xl text-[#141313]">
+                      Blanqueamiento dental
+                    </h3>
+                  </div>
+                  <span class="text-xs sm:text-sm text-[#141313]/70 text-right">Aclaramiento profesional seguro y eficaz</span>
+                </div>
+
+                <div class="urgencia-row py-5 flex items-baseline justify-between gap-4">
+                  <div class="flex items-baseline gap-4">
+                    <span class="row-num font-display font-bold text-lg text-[#141313]/50">03</span>
+                    <h3 class="row-title font-display font-semibold text-lg sm:text-xl text-[#141313]">
+                      Limpieza y profilaxis
+                    </h3>
+                  </div>
+                  <span class="text-xs sm:text-sm text-[#141313]/70 text-right">Higiene ultrasónica profunda sin molestias</span>
+                </div>
+              </div>
+
+              <!-- Línea de Especialidades -->
+              <div class="py-4 px-5 bg-[#E9E9E9] rounded-[6px] mb-8 border border-black/5">
+                <p class="font-display font-semibold text-xs sm:text-sm text-[#141313] tracking-wide uppercase text-center sm:text-left">
+                  Endodoncia · Cirugía oral · Estética dental · Implantes
+                </p>
+              </div>
+
+              <!-- CTA Estética -->
+              <div>
+                <a
+                  href="https://wa.link/507odt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 text-sm sm:text-base font-semibold text-[#141313] bg-[#CCB15A] rounded-full hover:brightness-105 active:scale-[0.98] transition-all"
+                >
+                  Consultar por WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Real Clinic Image (c6-1.webp) with 3px radius (5 cols) -->
+            <div class="lg:col-span-5">
+              <div class="overflow-hidden rounded-[3px] border border-[rgba(20,19,19,0.18)] shadow-sm">
+                <img
+                  src="https://odontoprime.cl/wp-content/uploads/2023/04/c6-1.webp"
+                  alt="Instalaciones clínicas de OdontoPrime Providencia"
+                  loading="lazy"
+                  class="w-full h-[320px] sm:h-[400px] object-cover object-center"
+                  width="900"
+                  height="600"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. HORARIO, UBICACIÓN Y CONTACTO -->
+      <section
+        id="contacto"
+        class="py-16 sm:py-20 md:py-28 bg-[#141313] text-[#F9F9F6] reveal-on-scroll"
+        aria-labelledby="contacto-title"
+      >
+        <div class="max-w-[1240px] mx-auto px-5 md:px-8">
+          <div class="max-w-2xl mb-12 sm:mb-16">
+            <p class="text-[#CCB15A] font-display text-[12px] font-medium tracking-[0.14em] uppercase mb-2">
+              DISPONIBILIDAD Y ATENCIÓN
+            </p>
+            <h2 id="contacto-title" class="font-display font-semibold text-[30px] sm:text-[42px] md:text-[50px] leading-tight text-[#FFFFFF] mb-4">
+              Horario, ubicación y contacto
+            </h2>
+            <p class="text-[16px] sm:text-[18px] text-[#F9F9F6]/80 leading-relaxed">
+              Encuéntranos en Providencia o envíanos tu consulta directa para orientarte antes de asistir.
+            </p>
+          </div>
+
+          <!-- 3-Column Grid: Horario | Ubicación & Mapa | Formulario -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8 items-start">
+            
+            <!-- Columna 1 — Horario en tabla limpia -->
+            <div class="bg-white/[0.02] border border-[rgba(249,249,246,0.18)] rounded-[6px] p-6 sm:p-7">
+              <h3 class="font-display font-semibold text-lg text-[#CCB15A] mb-4 uppercase tracking-wider text-xs">
+                HORARIOS DE ATENCIÓN
+              </h3>
+
+              <div class="space-y-4">
+                <!-- Fila Lunes a Viernes -->
+                <div id="row-weekday" class="p-3.5 rounded-[6px] border border-transparent transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="font-semibold text-sm sm:text-base text-[#F9F9F6]">Lunes a viernes</span>
+                    <span class="text-xs px-2 py-0.5 rounded-full bg-white/10 text-[#F9F9F6]/80 weekday-badge">14:00 – 23:00</span>
+                  </div>
+                  <p class="text-xs text-[#F9F9F6]/60 mt-1">Urgencias continuas por la tarde y noche</p>
+                </div>
+
+                <!-- Fila Sábado y Domingo -->
+                <div id="row-weekend" class="p-3.5 rounded-[6px] border border-transparent transition-colors">
+                  <div class="flex items-center justify-between">
+                    <span class="font-semibold text-sm sm:text-base text-[#F9F9F6]">Sábado y domingo</span>
+                    <span class="text-xs px-2 py-0.5 rounded-full bg-white/10 text-[#F9F9F6]/80 weekend-badge">13:00 – 23:00</span>
+                  </div>
+                  <p class="text-xs text-[#F9F9F6]/60 mt-1">Atención disponible todo el fin de semana</p>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-[rgba(249,249,246,0.1)] text-xs text-[#F9F9F6]/75 space-y-1.5">
+                <p>· Atención por orden de llegada y citas coordinadas.</p>
+                <p>· Evaluación inicial sin costo.</p>
+              </div>
+            </div>
+
+            <!-- Columna 2 — Dirección completa y mapa -->
+            <div class="bg-white/[0.02] border border-[rgba(249,249,246,0.18)] rounded-[6px] p-6 sm:p-7">
+              <h3 class="font-display font-semibold text-lg text-[#CCB15A] mb-4 uppercase tracking-wider text-xs">
+                CÓMO LLEGAR
+              </h3>
+
+              <div class="mb-4">
+                <p class="text-sm font-semibold text-[#FFFFFF]">Alfredo Barros Errázuriz 1954</p>
+                <p class="text-xs text-[#F9F9F6]/75">Oficina 609, Providencia, Santiago</p>
+                <p class="text-xs text-[#F9F9F6]/60 mt-0.5">A pasos de Metro Manuel Montt / Pedro de Valdivia</p>
+              </div>
+
+              <!-- Map iframe embed -->
+              <div class="overflow-hidden rounded-[3px] border border-[rgba(249,249,246,0.18)] mb-4 bg-[#141313]">
+                <iframe
+                  title="Ubicación OdontoPrime en Providencia"
+                  src="https://maps.google.com/maps?q=Alfredo%20Barros%20Err%C3%A1zuriz%201954,%20Providencia,%20Chile&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  class="w-full h-44 border-0"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  aria-label="Mapa de Google con ubicación de OdontoPrime"
+                ></iframe>
+              </div>
+
+              <a
+                href="https://goo.gl/maps/F9Wiz9HaVMHUkapCA"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 w-full py-2.5 text-xs sm:text-sm font-semibold text-[#F9F9F6] border border-[#CCB15A] rounded-full hover:bg-[#CCB15A] hover:text-[#141313] transition-colors"
+              >
+                <svg class="w-4 h-4 text-[#CCB15A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                <span>Cómo llegar (Google Maps)</span>
+              </a>
+            </div>
+
+            <!-- Columna 3 — Formulario de contacto directo (abre mailto) -->
+            <div class="bg-white/[0.02] border border-[rgba(249,249,246,0.18)] rounded-[6px] p-6 sm:p-7">
+              <h3 class="font-display font-semibold text-lg text-[#CCB15A] mb-4 uppercase tracking-wider text-xs">
+                CONSULTA RÁPIDA
+              </h3>
+
+              <form id="contact-form" class="space-y-3.5">
+                <div>
+                  <label for="form-nombre" class="block text-xs font-medium text-[#F9F9F6]/80 mb-1">Nombre</label>
+                  <input
+                    type="text"
+                    id="form-nombre"
+                    required
+                    placeholder="Tu nombre completo"
+                    class="w-full px-3.5 py-2.5 text-sm bg-white/5 border border-[rgba(249,249,246,0.18)] rounded-[3px] text-[#F9F9F6] placeholder-white/30 focus:outline-none focus:border-[#CCB15A] transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label for="form-telefono" class="block text-xs font-medium text-[#F9F9F6]/80 mb-1">Teléfono</label>
+                  <input
+                    type="tel"
+                    id="form-telefono"
+                    required
+                    placeholder="+56 9 1234 5678"
+                    class="w-full px-3.5 py-2.5 text-sm bg-white/5 border border-[rgba(249,249,246,0.18)] rounded-[3px] text-[#F9F9F6] placeholder-white/30 focus:outline-none focus:border-[#CCB15A] transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label for="form-motivo" class="block text-xs font-medium text-[#F9F9F6]/80 mb-1">¿Qué te pasa?</label>
+                  <select
+                    id="form-motivo"
+                    required
+                    class="w-full px-3.5 py-2.5 text-sm bg-[#141313] border border-[rgba(249,249,246,0.18)] rounded-[3px] text-[#F9F9F6] focus:outline-none focus:border-[#CCB15A] transition-colors"
+                  >
+                    <option value="Dolor dental" class="bg-[#141313] text-[#F9F9F6]">Dolor dental</option>
+                    <option value="Muela del juicio" class="bg-[#141313] text-[#F9F9F6]">Muela del juicio</option>
+                    <option value="Diente fracturado" class="bg-[#141313] text-[#F9F9F6]">Diente fracturado</option>
+                    <option value="Tratamiento de conducto" class="bg-[#141313] text-[#F9F9F6]">Tratamiento de conducto</option>
+                    <option value="Estética" class="bg-[#141313] text-[#F9F9F6]">Estética</option>
+                    <option value="Otro motivo" class="bg-[#141313] text-[#F9F9F6]">Otro</option>
+                  </select>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full mt-2 py-3 px-5 text-sm font-semibold text-[#141313] bg-[#CCB15A] rounded-full hover:brightness-105 active:scale-[0.98] transition-all cursor-pointer"
+                >
+                  Enviar consulta
+                </button>
+              </form>
+
+              <!-- Enlace inmediato a WhatsApp si es urgente -->
+              <div class="mt-4 pt-3 border-t border-[rgba(249,249,246,0.1)] text-center">
+                <a
+                  href="https://wa.link/507odt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs text-[#CCB15A] hover:underline font-medium inline-flex items-center gap-1"
+                >
+                  <span>¿Es urgente? Escríbenos por WhatsApp</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#141313] text-[#F9F9F6] border-t border-[rgba(249,249,246,0.18)] py-12">
+      <div class="max-w-[1240px] mx-auto px-5 md:px-8">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-8 border-b border-[rgba(249,249,246,0.1)]">
+          <!-- Logo negativo -->
+          <div>
+            <img
+              src="assets/logo-negativo.png"
+              onerror="this.onerror=null; this.src='assets/logo.png';"
+              alt="OdontoPrime"
+              class="h-9 w-auto object-contain mb-2"
+              width="180"
+              height="92"
+            />
+            <p class="text-xs text-[#F9F9F6]/70">Clínica de urgencia y estética dental en Providencia.</p>
+          </div>
+
+          <!-- Contact details & Instagram link -->
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-8 text-xs sm:text-sm text-[#F9F9F6]/85">
+            <a
+              href="tel:+56952110209"
+              class="hover:text-[#CCB15A] transition-colors inline-flex items-center gap-1.5"
+            >
+              <svg class="w-4 h-4 text-[#CCB15A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span>+56 9 5211 0209</span>
+            </a>
+
+            <a
+              href="mailto:odontoprimeurgenciadental@gmail.com"
+              class="hover:text-[#CCB15A] transition-colors inline-flex items-center gap-1.5"
+            >
+              <svg class="w-4 h-4 text-[#CCB15A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>odontoprimeurgenciadental@gmail.com</span>
+            </a>
+
+            <a
+              href="https://www.instagram.com/odontoprimeurgencia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-[#CCB15A] transition-colors inline-flex items-center gap-1.5"
+            >
+              <svg class="w-4 h-4 text-[#CCB15A]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span>@odontoprimeurgencia</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#F9F9F6]/60 gap-2">
+          <p>© Odontoprime Ltda. Todos los derechos reservados.</p>
+          <p>Providencia, Región Metropolitana, Chile.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MOBILE FIXED BOTTOM BAR (Height 64px, background #141313, safe-area-inset-bottom) -->
+    <div
+      class="fixed bottom-0 left-0 right-0 z-40 h-16 bg-[#141313] border-t border-[rgba(249,249,246,0.18)] flex items-center px-3 md:hidden shadow-lg"
+      style="padding-bottom: env(safe-area-inset-bottom, 0px);"
+      aria-label="Acciones directas móviles"
+    >
+      <div class="grid grid-cols-2 gap-2.5 w-full">
+        <!-- Mitad izquierda: Llamar -->
+        <a
+          href="tel:+56952110209"
+          class="flex items-center justify-center gap-1.5 h-11 border border-[#CCB15A] text-[#F9F9F6] rounded-full text-sm font-semibold active:bg-[#CCB15A]/10 transition-colors"
+        >
+          <svg class="w-4 h-4 text-[#CCB15A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <span>Llamar</span>
+        </a>
+
+        <!-- Mitad derecha: WhatsApp (Fondo #CCB15A, texto #141313, SVG monocromo #141313) -->
+        <a
+          href="https://wa.link/507odt"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center gap-1.5 h-11 bg-[#CCB15A] text-[#141313] rounded-full text-sm font-semibold active:brightness-95 transition-colors"
+        >
+          <svg class="w-4 h-4 fill-[#141313]" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- DESKTOP FLOATING WHATSAPP BUTTON (Bottom Right #CCB15A) -->
+    <a
+      href="https://wa.link/507odt"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hidden md:flex fixed bottom-8 right-8 z-40 w-14 h-14 bg-[#CCB15A] text-[#141313] rounded-full shadow-2xl items-center justify-center hover:scale-105 active:scale-95 transition-all group"
+      aria-label="Escribir por WhatsApp a OdontoPrime"
+    >
+      <svg class="w-7 h-7 fill-[#141313]" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+    </a>
+
+    <!-- SCRIPTS (Vanilla JavaScript, No build step required) -->
+    <script>
+      (function() {
+        // 1. Initial Page Load Animation Trigger
+        window.addEventListener('DOMContentLoaded', function() {
+          setTimeout(function() {
+            document.body.classList.add('loaded');
+          }, 60);
+          updateLiveClinicStatus();
+        });
+
+        // 2. Live Status Calculation in America/Santiago Timezone
+        function updateLiveClinicStatus() {
+          var now = new Date();
+          var formatter = new Intl.DateTimeFormat('en-US', {
+            timeZone: 'America/Santiago',
+            weekday: 'short',
+            hour: 'numeric',
+            minute: 'numeric',
+            hourCycle: 'h23'
+          });
+
+          var parts = formatter.formatToParts(now);
+          var weekday = '';
+          var hour = 0;
+          var minute = 0;
+
+          for (var i = 0; i < parts.length; i++) {
+            if (parts[i].type === 'weekday') weekday = parts[i].value;
+            if (parts[i].type === 'hour') hour = parseInt(parts[i].value, 10);
+            if (parts[i].type === 'minute') minute = parseInt(parts[i].value, 10);
+          }
+
+          var isWeekend = (weekday === 'Sat' || weekday === 'Sun');
+          var openHour = isWeekend ? 13 : 14;
+          var closeHour = 23;
+
+          var currentMinutes = hour * 60 + minute;
+          var openMinutes = openHour * 60;
+          var closeMinutes = closeHour * 60;
+
+          // Tomorrow opening time
+          var tomorrowOpenHour = 14;
+          if (weekday === 'Fri' || weekday === 'Sat') {
+            tomorrowOpenHour = 13;
+          }
+
+          var statusDot = document.getElementById('status-dot');
+          var statusText = document.getElementById('status-text');
+
+          if (currentMinutes >= openMinutes && currentMinutes < closeMinutes) {
+            // Open now
+            if (statusDot) statusDot.style.backgroundColor = '#CCB15A';
+            if (statusText) statusText.textContent = 'Abierto ahora · hasta las 23:00';
+          } else if (currentMinutes < openMinutes) {
+            // Closed, opens today
+            if (statusDot) statusDot.style.backgroundColor = '#DE4949';
+            if (statusText) statusText.textContent = 'Cerrado · abrimos hoy a las ' + openHour + ':00';
+          } else {
+            // Closed, opens tomorrow
+            if (statusDot) statusDot.style.backgroundColor = '#DE4949';
+            if (statusText) statusText.textContent = 'Cerrado · abrimos mañana a las ' + tomorrowOpenHour + ':00';
+          }
+
+          // Highlight today's row in Section 5 schedule table
+          var rowWeekday = document.getElementById('row-weekday');
+          var rowWeekend = document.getElementById('row-weekend');
+          if (rowWeekday && rowWeekend) {
+            if (isWeekend) {
+              rowWeekend.classList.add('border-[#CCB15A]', 'bg-[#CCB15A]/10');
+              rowWeekend.classList.remove('border-transparent');
+              rowWeekday.classList.remove('border-[#CCB15A]', 'bg-[#CCB15A]/10');
+              rowWeekday.classList.add('border-transparent');
+            } else {
+              rowWeekday.classList.add('border-[#CCB15A]', 'bg-[#CCB15A]/10');
+              rowWeekday.classList.remove('border-transparent');
+              rowWeekend.classList.remove('border-[#CCB15A]', 'bg-[#CCB15A]/10');
+              rowWeekend.classList.add('border-transparent');
+            }
+          }
+        }
+
+        // Recalculate status every 60 seconds
+        setInterval(updateLiveClinicStatus, 60000);
+
+        // 3. Scroll Progress Bar & Sticky Header Blur Transformation
+        var progressBar = document.getElementById('scroll-progress-bar');
+        var mainHeader = document.getElementById('main-header');
+
+        window.addEventListener('scroll', function() {
+          var scrollTop = window.scrollY || document.documentElement.scrollTop;
+          var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          var scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+          if (progressBar) {
+            progressBar.style.width = scrollPercent + '%';
+          }
+
+          if (mainHeader) {
+            if (scrollTop > 40) {
+              mainHeader.style.backgroundColor = 'rgba(20, 19, 19, 0.72)';
+              mainHeader.style.backdropFilter = 'blur(18px)';
+              mainHeader.style.webkitBackdropFilter = 'blur(18px)';
+              mainHeader.style.borderBottom = '1px solid rgba(249, 249, 246, 0.18)';
+            } else {
+              mainHeader.style.backgroundColor = 'transparent';
+              mainHeader.style.backdropFilter = 'none';
+              mainHeader.style.webkitBackdropFilter = 'none';
+              mainHeader.style.borderBottom = 'none';
+            }
+          }
+        }, { passive: true });
+
+        // 4. Soft Reveal on Scroll using IntersectionObserver
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-revealed');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1 });
+
+          document.querySelectorAll('.reveal-on-scroll').forEach(function(el) {
+            observer.observe(el);
+          });
+        } else {
+          document.querySelectorAll('.reveal-on-scroll').forEach(function(el) {
+            el.classList.add('is-revealed');
+          });
+        }
+
+        // 5. Contact Form Handler (Opens mailto with formatted values)
+        var contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+          contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var nombre = document.getElementById('form-nombre').value.trim();
+            var telefono = document.getElementById('form-telefono').value.trim();
+            var motivo = document.getElementById('form-motivo').value;
+
+            var subject = encodeURIComponent('Consulta desde la web');
+            var bodyText = encodeURIComponent(
+              'Nombre: ' + nombre + '\n' +
+              'Teléfono: ' + telefono + '\n' +
+              '¿Qué te pasa?: ' + motivo
+            );
+
+            var mailtoLink = 'mailto:odontoprimeurgenciadental@gmail.com?subject=' + subject + '&body=' + bodyText;
+            window.location.href = mailtoLink;
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

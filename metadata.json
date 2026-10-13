@@ -1,0 +1,6 @@
+{
+  "name": "OdontoPrime - Urgencia Dental en Providencia",
+  "description": "Urgencia dental en Providencia: atención inmediata y sin dolor con especialistas. Abierto todos los días hasta las 23:00. Escríbenos por WhatsApp o llama al +56 9 5211 0209.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
